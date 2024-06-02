@@ -7,31 +7,37 @@ This script automates the setup process for a Svelte project on an EC2 instance 
 - EC2 instance running Amazon Linux
 - GitHub repository URL for the Svelte project
 
-## Usage
+## Quick Start
+
+To quickly set up the Svelte project on your EC2 instance using the script from the public GitHub repository, follow these steps:
 
 1. Connect to your EC2 instance via SSH.
 
-2. Create a new file named `build.sh` using a text editor (e.g., `nano build.sh`).
+2. Install Git (if not already installed):
+   ```bash
+   sudo yum install git -y
+   ```
 
-3. Copy and paste the contents of the provided script into the `build.sh` file.
+3. Download the script:
+   ```bash
+   wget https://raw.githubusercontent.com/1955m/Svelte_buildScript/main/build.sh
+   ```
 
-4. Save the file and exit the text editor.
-
-5. Make the `build.sh` script executable by running the following command:
+4. Make the script executable:
    ```bash
    chmod +x build.sh
    ```
 
-6. Run the script with sudo privileges:
+5. Run the script with sudo privileges:
    ```bash
    sudo ./build.sh
    ```
 
-7. When prompted, enter the GitHub link for your Svelte project repository.
+6. When prompted, enter the GitHub link for your Svelte project repository.
 
-8. Optionally, enter a custom server name for Nginx. If left blank, it will default to "your-domain.com".
+7. Optionally, enter a custom server name for Nginx. If left blank, it will default to "your-domain.com".
 
-9. The script will perform the following actions:
+8. The script will perform the following actions:
    - Update the system and install necessary packages (Node.js, npm, Git)
    - Clone the project repository from the provided GitHub link
    - Install project dependencies
@@ -40,7 +46,7 @@ This script automates the setup process for a Svelte project on an EC2 instance 
    - Install and configure Nginx as a reverse proxy
    - Create an `update_sveltekit.sh` script for updating the project with new changes from Git
 
-10. Once the script finishes executing, your Svelte project will be set up and running on the EC2 instance.
+9. Once the script finishes executing, your Svelte project will be set up and running on the EC2 instance.
 
 ## Updating the Project
 
