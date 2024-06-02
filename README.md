@@ -1,4 +1,4 @@
-# Svelte Project Setup Script
+# Svelte Project Setup Script on AWS EC2
 
 This script automates the setup process for a Svelte project on an EC2 instance running Amazon Linux. It clones a project from a GitHub repository, installs the necessary dependencies, builds the project, and sets up a systemd service and Nginx reverse proxy for running the Svelte application.
 
@@ -19,9 +19,6 @@ Before running the script, ensure that your SvelteKit project is properly config
 2. Configure your `svelte.config.js` file by replacing `@sveltejs/adapter-auto` with `@sveltejs/adapter-node`:
    ```javascript
    import adapter from '@sveltejs/adapter-node';
-   //                                ^
-   // replace @sveltejs/adapter-auto |
-
    ```
 
 Now, your SvelteKit setup is done.
