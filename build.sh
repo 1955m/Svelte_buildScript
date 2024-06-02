@@ -77,6 +77,9 @@ EOF
 sudo nginx -t
 sudo systemctl restart nginx
 
+# Enable Nginx to start on system boot
+sudo systemctl enable nginx
+
 # Create the update_sveltekit.sh script in the root directory
 cd ~
 sudo tee update_sveltekit.sh > /dev/null <<EOF
