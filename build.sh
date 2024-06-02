@@ -76,13 +76,10 @@ EOF
 # Test Nginx configuration and restart the service
 sudo nginx -t
 sudo systemctl restart nginx
-
-# Enable Nginx to start on system boot
 sudo systemctl enable nginx
 
-# Create the update_sveltekit.sh script in the root directory
-cd ~
-sudo tee update_sveltekit.sh > /dev/null <<EOF
+# Create the update_sveltekit.sh script in the same directory as the script
+tee update_sveltekit.sh > /dev/null <<EOF
 #!/bin/bash
 
 # Change to the project directory
@@ -110,4 +107,4 @@ EOF
 chmod +x update_sveltekit.sh
 
 echo "Svelte project setup completed successfully!"
-echo "To update the project with new changes from Git, run: sudo ./update_sveltekit.sh"
+echo "To update the project with new changes from Git, run: ./update_sveltekit.sh"
