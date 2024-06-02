@@ -81,8 +81,8 @@ sudo systemctl enable nginx
 # Change back to the original directory where the script was run
 cd ..
 
-# Create the update_sveltekit.sh script in the same directory as the script
-tee update_sveltekit.sh > /dev/null <<EOF
+# Create the update.sh script in the same directory as the script
+tee update.sh > /dev/null <<EOF
 #!/bin/bash
 
 # Change to the project directory
@@ -106,8 +106,8 @@ sudo systemctl start sveltekit
 echo "Code updated and SvelteKit service restarted."
 EOF
 
-# Make the update_sveltekit.sh script executable
-chmod +x update_sveltekit.sh
+# Make the update.sh script executable
+chmod +x update.sh
 
 echo "Svelte project setup completed successfully!"
-echo "To update the project with new changes from Git, run: ./update_sveltekit.sh"
+echo "To update the project with new changes from Git, run: ./update.sh"
