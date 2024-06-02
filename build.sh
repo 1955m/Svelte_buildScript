@@ -78,6 +78,9 @@ sudo nginx -t
 sudo systemctl restart nginx
 sudo systemctl enable nginx
 
+# Change back to the original directory where the script was run
+cd ..
+
 # Create the update_sveltekit.sh script in the same directory as the script
 tee update_sveltekit.sh > /dev/null <<EOF
 #!/bin/bash
