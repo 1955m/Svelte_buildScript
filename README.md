@@ -44,7 +44,7 @@ To quickly set up the Svelte project on your EC2 instance using the script from 
    - Build the Svelte project
    - Create a systemd service for running the Svelte application
    - Install and configure Nginx as a reverse proxy
-   - Create an `update_sveltekit.sh` script for updating the project with new changes from Git
+   - Create an `update.sh` script for updating the project with new changes from Git
 
 9. Once the script finishes executing, your Svelte project will be set up and running on the EC2 instance.
 
@@ -52,7 +52,7 @@ To quickly set up the Svelte project on your EC2 instance using the script from 
 
 To update the Svelte project with new changes from the Git repository, run the following command:
 ```bash
-sudo ./update_sveltekit.sh
+sudo ./update.sh
 ```
 
 This script will:
@@ -66,7 +66,7 @@ This script will:
 
 - If you want to use a different port for your Svelte application, modify the `PORT` environment variable in the systemd service file.
 - Adjust the Nginx configuration in the `sveltekit.conf` file according to your requirements.
-- Customize the `update_sveltekit.sh` script if you need to perform additional actions during the project update process.
+- Customize the `update.sh` script if you need to perform additional actions during the project update process.
 
 ## Note
 
