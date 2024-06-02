@@ -24,7 +24,7 @@ Before running the script, ensure that your SvelteKit project is properly config
 
    ```
 
-Now, your SvelteKit setup is almost done.
+Now, your SvelteKit setup is done.
 
 ## Quick Start
 
