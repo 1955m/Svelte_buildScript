@@ -7,6 +7,25 @@ This script automates the setup process for a Svelte project on an EC2 instance 
 - EC2 instance running Amazon Linux
 - GitHub repository URL for the Svelte project
 
+## SvelteKit Configuration
+
+Before running the script, ensure that your SvelteKit project is properly configured:
+
+1. Install the `@sveltejs/adapter-node` module in your SvelteKit project:
+   ```bash
+   npm install @sveltejs/adapter-node
+   ```
+
+2. Configure your `svelte.config.js` file by replacing `@sveltejs/adapter-auto` with `@sveltejs/adapter-node`:
+   ```javascript
+   import adapter from '@sveltejs/adapter-node';
+   //                                ^
+   // replace @sveltejs/adapter-auto |
+
+   ```
+
+Now, your SvelteKit setup is almost done.
+
 ## Quick Start
 
 To quickly set up the Svelte project on your EC2 instance using the script from the public GitHub repository, follow these steps:
